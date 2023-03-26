@@ -1,4 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿// --------------------------------------------------------
+// Copyright (c) Coalition of Good-Hearted Engineers
+// Developed by CashOverflow Team
+// --------------------------------------------------------
+
+using System.Threading.Tasks;
 using RESTFulSense.Clients;
 
 namespace CashOverFlow.Portal.Brokers.API
@@ -14,7 +19,7 @@ namespace CashOverFlow.Portal.Brokers.API
 
         private async ValueTask<T> PostAsync<T>(string relativeUrl, T content) =>
             await this.apiClient.PostContentAsync<T>(relativeUrl, content);
-        
+
         private async ValueTask<T> PutAsync<T>(string relativeUrl, T content) =>
             await this.apiClient.PutContentAsync<T>(relativeUrl, content);
 
