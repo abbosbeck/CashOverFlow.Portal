@@ -18,7 +18,7 @@ namespace CashOverFlow.Portal.Brokers.API
         private async ValueTask<T> PutAsync<T>(string relativeUrl, T content) =>
             await this.apiClient.PutContentAsync<T>(relativeUrl, content);
 
-        private async ValueTask<T> DeleteAsync<T>(string relativeurl) =>
-            await this.DeleteAsync(relativeurl);
+        private async ValueTask<T> DeleteAsync<T>(string relativeUrl) =>
+            await this.DeleteAsync<T>(relativeUrl);
     }
 }
